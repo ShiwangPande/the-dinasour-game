@@ -7,7 +7,7 @@ function jump() {
         setTimeout(function () {
             dino.classList.remove("jump");
             //removes the jump class from the dino once it has jumped so that it can jump again
-        }, 400);
+        }, 1000);
     }
 }
 let checkAlive = setInterval(function () {
