@@ -29,7 +29,7 @@ let checkAlive = setInterval(function () {
         window.getComputedStyle(cactus).getPropertyValue("left")
     );
     //check for collision
-    if (cactusLeft > 0 && cactusLeft < 45 && dinoTop >= 110) {
+    if (cactusLeft > 0 && cactusLeft < 30 && dinoTop >= 100) {
         dino.style.animationPlayState = "paused";
         cactus.style.animationPlayState = "paused";
         alert("Whoops! Game Over :(");
