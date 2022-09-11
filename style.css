@@ -2,6 +2,11 @@
   padding: 0;
   margin: 0;
 }
+body {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background-color: #fafafa;
+}
 .header {
   /* width: 100%;
   height: 100px; */
@@ -24,6 +29,10 @@
   -moz-animation: glow 3s ease-in-out infinite alternate;
   animation: glow 3s ease-in-out infinite alternate;
 }
+canvas {
+  border: 1px solid #d3d3d3;
+  background-color: #f1f1f1;
+}
 @keyframes glow {
   from {
     text-shadow: 0 0 5px #ff000083, 0 0 10px #ff000055, 0 0 25px #ff00003e,
@@ -43,16 +52,22 @@
   margin: auto;
   background: url("background2-D.jpg");
 }
+.scoreboard {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+}
 #dino {
   width: 40px;
   height: 70px;
   background-image: url(sahil.png);
   background-size: auto 70px;
   position: relative;
-  top: 140px;
+  top: 115px;
 }
 .jump {
-  animation: jump 0.3s linear;
+  animation: jump 0.35s linear;
 }
 button {
   display: block;
@@ -82,30 +97,30 @@ button:hover {
 }
 @keyframes jump {
   0% {
-    top: 143px; /*distance from the top of the parent element*/
+    top: 115px; /*distance from the top of the parent element*/
   }
   30% {
-    top: 115px;
-  }
-  50% {
     top: 70px;
   }
+  50% {
+    top: 26px;
+  }
   80% {
-    top: 115px;
+    top: 70px;
   }
   100% {
-    top: 143px;
+    top: 110px;
   }
 }
 #cactus {
   width: 20px;
   height: 40px;
   position: relative;
-  top: 91px;
+  top: 73px;
   left: 580px; /*width of frame - width of cactus*/
   background-image: url(budweiser.png);
   background-size: 20px 40px;
-  animation: cactus-block 1.5s infinite linear;
+  animation: cactus-block 2s infinite linear;
 }
 @keyframes cactus-block {
   0% {
@@ -114,4 +129,7 @@ button:hover {
   100% {
     left: -20px;
   }
+}
+label {
+  font-weight: bolder;
 }
